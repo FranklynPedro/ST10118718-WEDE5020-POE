@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>About Us</title>
+    <style>
+        /* General heading styling */
+        h2 {
+            margin: 25px;
+            text-transform: uppercase;
+            color: #41a9c9;
+        }
+
+        /* Custom styling for paragraphs */
+        .custom-paragraph {
+            text-align: justify;
+            margin: 25px;
+            line-height: 1.8;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+                /* Ensures box-sizing is applied to all elements (W3Schools, 2024) */
+                * {
+            box-sizing: border-box;
+        }
+
+        /* Padding around the grid to prevent images from touching edges (W3Schools, 2024) */
+        .row {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 80px; 
+            padding: 20px; 
+            justify-content: center;
+        }
+
+        /* Column styling (W3Schools, 2024) */
+        .column {
+    flex: 1 1 250px;
+    max-width: 250px;
+    position: relative;
+    margin: 20px; 
+}
+
+
+        /* Aspect ratio box for images (W3Schools, 2024) */
+        .column::before {
+            content: "";
+            display: block;
+            padding-top: 100%; 
+        }
+
+        /* Image styling (W3Schools, 2024) */
+        .column img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            border-radius: 10px;
+        }
+
+        /* Responsive styling: stacks columns vertically on smaller screens (W3Schools, 2024) */
+        @media (max-width: 768px) {
+            .column {
+                flex: 0 1 250px;
+                max-width: 250%; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Logo section(W3Schools,2024) -->
+<div class="logo">
+    <!-- Logo image with 100% width to fit container(W3Schools,2024) -->
+    <img src="Images/puppy_paradise_logo.png" alt="logo" width="100%">
+</div>
+
+<!-- Navigation bar(W3Schools,2024) -->
+<div class="topnav" id="myTopnav">
+    <!-- Navigation links with icons(W3Schools,2024) -->
+    <a href="Homepage.html" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="AboutUs.html"><i class="fa fa-fw fa-info-circle"></i> About Us</a>
+    <a href="AdoptAPet.html"><i class="fa fa-fw fa-paw"></i> Adopt A Pet</a>
+    <a href="Gallery.html"><i class="fa fa-picture-o"></i> Gallery</a>
+    <a href="ContactUs.html"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+    <!-- Toggle icon for mobile view(W3Schools,2024) -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<!-- Main header(W3Schools,2024) -->
+<h1>About Us</h1>
+
+<h2>Our Mission</h2>
+<!-- Custom styled paragraph(W3Schools,2024) -->
+<p class="custom-paragraph">
+    Puppy Paradise Pet Shop is a heartwarming pet adoption center located in the heart of Port-Elizabeth. Our mission is
+    to rescue, rehabilitate, and re-home abandoned and stray puppies, providing them with a second chance to find their
+    forever families. We are proud to work closely with local shelters and animal rescue organizations to give every
+    puppy the love and care they deserve. From the moment we receive a new rescue, our team of dedicated caregivers and
+    veterinarians provide all the necessary medical attention, including vaccinations, spaying/neutering, and regular
+    health check-ups. We believe every puppy deserves a fresh start in life, and we are committed to making that
+    possible through compassion, hard work, and unwavering dedication. Every adoption is a success story, and we are
+    honored to be part of each puppy’s journey toward a brighter future.
+</p>
+
+<h2>Our Dedication</h2>
+<!-- Custom styled paragraph(W3Schools,2024) -->
+<p class="custom-paragraph">
+    As a Non-Profit Organization, Puppy Paradise is dedicated to improving the lives of animals by creating a safe,
+    nurturing environment where they can heal and grow. We strive to promote responsible pet ownership, ensuring that
+    every pet adopted from our center goes to a home that will provide lifelong care and affection. Our team is not only
+    focused on re-homing but also on educating the public about the importance of adopting pets rather than purchasing
+    them from breeders. By doing so, we can reduce the number of abandoned animals on the streets. Additionally, our
+    facility is equipped with spacious play areas, comfortable living spaces, and trained staff who monitor the puppies
+    well-being 24/7. We are also committed to working with communities to raise awareness of pet care, vaccinations, and
+    ethical treatment, fostering a culture where pets are valued and cared for as beloved family members.
+</p>
+
+<h2>Post-Adoption Support</h2>
+<!-- Custom styled paragraph(W3Schools,2024) -->
+<p class="custom-paragraph">
+    Our commitment extends beyond the adoption process. We offer post-adoption support, educational resources, and pet
+    care guidance to new pet parents. At Puppy Paradise, we believe that every puppy deserves a loving home, and we work
+    tirelessly to make that dream a reality for the animals in our care. After a puppy finds its forever home, we
+    continue to stay in touch with the new pet owners to provide advice on everything from feeding schedules and
+    exercise routines to behavioral training. This ongoing support is crucial to ensuring a smooth transition for both
+    the pet and its new family. We also host regular workshops and meetups where new pet parents can connect, share
+    their experiences, and learn from one another. Our goal is not just to facilitate adoptions, but to build a strong
+    community of responsible and informed pet owners who are committed to giving their puppies the best possible life.
+</p>
+
+<h2>Community Outreach</h2>
+<!-- Custom styled paragraph(W3Schools,2024) -->
+<p class="custom-paragraph">
+    In addition to providing top-tier care for our puppies, we also focus on community outreach. We conduct
+    sterilization programs, pet education drives, and collaborate with local communities to help reduce the number of
+    unwanted litters. Every year, thousands of animals find new homes thanks to the generous support of donors and
+    volunteers who share our vision of a world where every pet has a home. Our outreach efforts also include partnering
+    with schools to teach children about the importance of kindness toward animals and how they can contribute to
+    improving animal welfare. Through these educational initiatives, we hope to instill a sense of responsibility in the
+    younger generation, ensuring that they grow up with a deep respect for all living creatures. Moreover, we provide
+    free or low-cost veterinary services to low-income families, ensuring that every pet, regardless of its owner's
+    financial situation, can receive proper care.
+</p>
+
+<h2>Thank You</h2>
+<!-- Custom styled paragraph(W3Schools,2024) -->
+<p class="custom-paragraph">
+    We are deeply grateful to all our supporters, volunteers, and donors who continue to help us in our mission.
+    Together, we can create a world where every puppy gets a second chance at a happy, healthy life. Thank you for being
+    a part of the Puppy Paradise family. Your contributions allow us to provide not only the essentials, such as food
+    and shelter, but also medical care and enrichment activities that keep our puppies happy and healthy. Without your
+    support, we would not be able to continue rescuing and re-homing so many animals each year. Every donation, every
+    hour volunteered, and every shared story makes a difference. As we move forward, we hope to continue growing our
+    community and making an even greater impact on the lives of the animals we serve. From the bottom of our hearts,
+    thank you for your unwavering dedication and compassion.
+</p>
+
+<!-- Image for about us page(W3Schools,2024) -->
+<div class="row">
+    <div class="column">
+        <img src="Images/aboutus_image.jpg" alt="Image1">
+    </div>
+    <div class="column">
+        <img src="Images/aboutus_image2.jpg" alt="Image2">
+    </div>
+    <div class="column">
+        <img src="Images/aboutus_image3.jpg" alt="Image3">
+    </div>
+</div>
+
+<!-- Footer section(W3Schools, 2024) -->
+<div class="footer">
+    <!-- Author name(W3Schools, 2024) -->
+    <p>Author: Franklyn Pedro</p>
+    <!-- Placeholder for dynamic year(W3Schools, 2024) -->
+    <p id="footerYear"></p>
+</div>
+
+
+<script>
+    // Function to highlight the active navigation link based on the current page(Coyier, 2012)
+    function setActiveLink() {
+        // Get the current path of the URL(Coyier, 2012)
+        var currentPath = window.location.pathname;
+
+        // Select all anchor tags within elements with the class 'topnav'(Coyier, 2012)
+        var links = document.querySelectorAll('.topnav a');
+
+        // Iterate over each link(Coyier, 2012)
+        links.forEach(function (link) {
+            // Extract the pathname from the href attribute of the link(Coyier, 2012)
+            var linkPath = new URL(link.href).pathname;
+
+            // Check if the current path matches the link's path or if the current path starts with the link's path(Coyier, 2012)
+            // This helps in highlighting links that lead to subpages as well(Coyier, 2012)
+            if (currentPath === linkPath || currentPath.startsWith(linkPath) && linkPath !== '/') {
+                // Add the 'active' class to the link if it matches the current path(Coyier, 2012)
+                link.classList.add('active');
+            } else {
+                // Remove the 'active' class from the link if it does not match the current path(Coyier, 2012)
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    // Function to update the footer with the current year(W3Schools,2024)
+    function updateFooterYear() {
+        // Get the current year(W3Schools,2024)
+        var year = new Date().getFullYear();
+
+        // Get the footer year element by its ID(W3Schools,2024)
+        var footerYearElement = document.getElementById("footerYear");
+
+        // Update the footer year element's inner HTML to display the current year(W3Schools,2024)
+        footerYearElement.innerHTML = `© ${year} All rights reserved.`;
+    }
+
+    // Add an event listener to the window that executes when the page loads(W3Schools,2024)
+    window.addEventListener('load', function () {
+        // Call function to set the active link (assuming it's defined elsewhere)(W3Schools,2024)
+        setActiveLink();
+
+        // Call function to update the footer year(W3Schools,2024)
+        updateFooterYear();
+    });
+
+    // Function to toggle the responsive navigation menu(W3Schools,2024)
+    function myFunction() {
+        // Get the element with id (W3Schools,2024)
+        var x = document.getElementById("myTopnav");
+
+        // Check if the current class name is 'topnav'(W3Schools,2024)
+        if (x.className === "topnav") {
+            // If so, add the 'responsive' class to it(W3Schools,2024)
+            x.className += " responsive";
+        } else {
+            // If not, reset the class name to 'topnav'(W3Schools,2024)
+            x.className = "topnav";
+        }
+    }
+</script>
+
+</body>
+</html>

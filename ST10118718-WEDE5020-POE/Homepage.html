@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Puppy Paradise offers adoption opportunities for puppies in need of a loving home. Explore our services and learn more about our mission.">
+    <meta name="keywords" content="puppy adoption, animal rescue, adopt a pet, animal shelter">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Welcome to Puppy Paradise | Adopt a Pet</title>
+    <style>
+        /* Header styling (W3Schools, 2024) */
+        h2 {
+            margin: 25px;
+            text-transform: uppercase;
+            color: #41a9c9;
+        }
+
+        /* Custom styling for paragraphs (W3Schools, 2024) */
+        .custom-paragraph {
+            text-align: justify;
+            margin: 25px;
+            line-height: 1.8;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Custom styling for images (W3Schools, 2024) */
+        .custom-img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin: 25px auto;
+            display: block;
+            width: 50%;
+        }
+
+        /* Ensures box-sizing is applied to all elements (W3Schools, 2024) */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Padding around the grid to prevent images from touching edges (W3Schools, 2024) */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        /* Column styling (W3Schools, 2024) */
+        .column {
+            flex: 1 1 250px;
+            max-width: 250px;
+            position: relative;
+            margin: 20px;
+        }
+
+
+        /* Aspect ratio box for images (W3Schools, 2024) */
+        .column::before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        /* Image styling (W3Schools, 2024) */
+        .column img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Responsive styling: stacks columns vertically on smaller screens (W3Schools, 2024) */
+        @media (max-width: 768px) {
+            .column {
+                flex: 0 1 250px;
+                max-width: 250%;
+            }
+        }
+
+        /* Section header styling (W3Schools, 2024) */
+        .section h2 {
+            margin-top: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Section paragraph styling (W3Schools, 2024) */
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Section list styling (W3Schools, 2024) */
+        .section ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        /* Section list item styling (W3Schools, 2024) */
+        .section ul li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Font Awesome icon for list items (W3Schools, 2024) */
+        .section ul li::before {
+            content: "\f0da";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #41a9c9;
+            margin-right: 10px;
+        }
+
+        /*Responsive Iframes(W3Schools,2024)*/
+        .container {
+            position: relative;
+            width: 50%;
+            overflow: hidden;
+            padding-top: 45%;
+            /* 16:9 Aspect Ratio */
+        }
+
+        .responsive-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 45%;
+            height: 45%;
+            border: none;
+        }
+
+        /* Responsive styling for images (W3Schools, 2024) */
+        @media (max-width: 768px) {
+            .custom-img {
+                max-width: 90%;
+                width: auto;
+            }
+        }
+
+        /* Adjust google form size for smaller screens (W3Schools, 2024) */
+        @media (max-width: 700px) {
+            .container {
+                width: 100%;
+                padding-top: 45%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                width: 100%;
+                padding-top: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logo section(W3Schools,2024) -->
+    <div class="logo">
+        <!-- Logo image with 100% width to fit container(W3Schools,2024) -->
+        <img src="Images/puppy_paradise_logo.png" alt="logo" width="100%">
+    </div>
+
+    <!-- Navigation bar(W3Schools,2024) -->
+    <div class="topnav" id="myTopnav">
+        <!-- Navigation links with icons(W3Schools,2024) -->
+        <a href="Homepage.html" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="AboutUs.html"><i class="fa fa-fw fa-info-circle"></i> About Us</a>
+        <a href="AdoptAPet.html"><i class="fa fa-fw fa-paw"></i> Adopt A Pet</a>
+        <a href="Gallery.html"><i class="fa fa-picture-o"></i> Gallery</a>
+        <a href="ContactUs.html"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+        <!-- Toggle icon for mobile view(W3Schools,2024) -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Main header(W3Schools,2024) -->
+    <h1>Home</h1>
+
+    <!-- Welcome section(W3Schools,2024) -->
+    <h2>Welcome to Puppy Paradise</h2>
+
+    <div class="content">
+        <!-- Introduction section(W3Schools,2024) -->
+        <div class="intro">
+            <!-- Custom styled paragraph(W3Schools,2024) -->
+            <p class="custom-paragraph">Welcome to Puppy Paradise, your premier destination for adopting lovable and
+                loyal
+                pets and discovering how you can make a meaningful difference in their lives. At Puppy Paradise, we are
+                dedicated to rescuing, rehabilitating, and re-homing puppies and other pets who are in desperate need of
+                a
+                caring forever home. Our devoted team of volunteers and staff work tirelessly to ensure that each animal
+                receives the love, medical care, and attention they deserve. On our website, you'll find detailed
+                information about our adoption process, allowing you to easily navigate through the steps required to
+                bring
+                a new furry friend into your home. Browse through our extensive gallery of available pets, each with
+                their
+                unique story and personality, and find the perfect match for your family. Additionally, we invite you to
+                explore the various ways you can get involved in our community outreach efforts, from volunteering your
+                time
+                to supporting our fundraising events. Together, we can create a better future for these wonderful
+                animals
+                and make a lasting impact in their lives. Thank you for visiting Puppy Paradise, and we hope you enjoy
+                your
+                journey with us!</p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="Images/homepage_image.jpg" alt="Image1">
+            </div>
+            <div class="column">
+                <img src="Images/homepage_image2.jpg" alt="Image2">
+            </div>
+            <div class="column">
+                <img src="Images/homepage_image3.jpg" alt="Image3">
+            </div>
+        </div>
+
+        <!-- Services overview section(W3Schools,2024) -->
+        <div class="section">
+            <!-- Header for services overview(W3Schools,2024) -->
+            <h2>What You Can Find Here</h2>
+            <!-- Custom styled paragraph(W3Schools,2024) -->
+            <p class="custom-paragraph">At Puppy Paradise, we offer a range of services and information to help you find
+                your perfect pet and learn more about our initiatives. Here's a quick overview of what you can explore
+                on
+                our website:</p>
+            <!-- List of services(W3Schools,2024) -->
+            <ul>
+                <li style="margin:25px;">Learn about our mission and the work we do on the <a href="AboutUs.html"
+                        style="color:#41a9c9;" onmouseover="this.style.color='#0282a9';"
+                        onmouseout="this.style.color='#41a9c9';">About Us</a> page.</li>
+                <li style="margin:25px;">Discover how you can adopt a pet and view available animals on the <a
+                        href="AdoptAPet.html" style="color:#41a9c9;" onmouseover="this.style.color='#0282a9';"
+                        onmouseout="this.style.color='#41a9c9';">Adopt A Pet</a> page.</li>
+                <li style="margin:25px;">Browse through photos of our animals and see them in action on the <a
+                        href="Gallery.html" style="color:#41a9c9;" onmouseover="this.style.color='#0282a9';"
+                        onmouseout="this.style.color='#41a9c9';">Gallery</a> page.</li>
+                <li style="margin:25px;">Get in touch with us for any questions or support through the <a
+                        href="ContactUs.html" style="color:#41a9c9;" onmouseover="this.style.color='#0282a9';"
+                        onmouseout="this.style.color='#41a9c9';">Contact Us</a> page.</li>
+            </ul>
+        </div>
+
+        <!-- Get Involved section(W3Schools,2024) -->
+        <div class="section">
+            <!-- Header for involvement opportunities(W3Schools,2024) -->
+            <h2>Get Involved</h2>
+            <!-- Custom styled paragraph(W3Schools,2024) -->
+            <p class="custom-paragraph">At Puppy Paradise, we believe that everyone can make a positive impact in the
+                lives of animals. Whether you're interested in becoming a volunteer, donating to our cause, or
+                participating in our outreach and awareness programs, there are many ways you can support our mission.
+                Your involvement helps us provide medical care, food, shelter, and most importantly, a loving
+                environment for pets in need. Join us today in creating a brighter future for these animals by becoming
+                part of a compassionate community. Together, we can transform lives and make a real difference for every
+                pet waiting for a forever home.</p>
+        </div>
+    </div>
+
+    <div class="container" style="margin: 0 auto;">
+        <iframe class="responsive-iframe"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdeAPCMU-4F7H_5jN0ImokN1rGmoxb9uxBWYMVg6Qd5MeYuQQ/viewform?embedded=true"
+            style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+
+    <!-- Footer paragraph(W3Schools,2024) -->
+    <p class="custom-paragraph">We believe in community and the power of collective efforts. Join us in making a
+        difference
+        by participating in our events, volunteering, or making a donation. Every bit of support helps us provide better
+        care and find loving homes for our pets.</p>
+
+    <!-- Footer section(W3Schools, 2024) -->
+    <div class="footer">
+        <!-- Author name(W3Schools, 2024) -->
+        <p>Author: Franklyn Pedro</p>
+        <!-- Placeholder for dynamic year(W3Schools, 2024) -->
+        <p id="footerYear"></p>
+    </div>
+
+    <script>
+        // Function to highlight the active navigation link based on the current page(Coyier, 2012)
+        function setActiveLink() {
+            // Get the current path of the URL(Coyier, 2012)
+            var currentPath = window.location.pathname;
+
+            // Select all anchor tags within elements with the class 'topnav'(Coyier, 2012)
+            var links = document.querySelectorAll('.topnav a');
+
+            // Iterate over each link(Coyier, 2012)
+            links.forEach(function (link) {
+                // Extract the pathname from the href attribute of the link(Coyier, 2012)
+                var linkPath = new URL(link.href).pathname;
+
+                // Check if the current path matches the link's path or if the current path starts with the link's path(Coyier, 2012)
+                // This helps in highlighting links that lead to subpages as well(Coyier, 2012)
+                if (currentPath === linkPath || currentPath.startsWith(linkPath) && linkPath !== '/') {
+                    // Add the 'active' class to the link if it matches the current path(Coyier, 2012)
+                    link.classList.add('active');
+                } else {
+                    // Remove the 'active' class from the link if it does not match the current path(Coyier, 2012)
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Function to update the footer with the current year(W3Schools,2024)
+        function updateFooterYear() {
+            // Get the current year(W3Schools,2024)
+            var year = new Date().getFullYear();
+
+            // Get the footer year element by its ID(W3Schools,2024)
+            var footerYearElement = document.getElementById("footerYear");
+
+            // Update the footer year element's inner HTML to display the current year(W3Schools,2024)
+            footerYearElement.innerHTML = `© ${year} All rights reserved.`;
+        }
+
+        // Add an event listener to the window that executes when the page loads(W3Schools,2024)
+        window.addEventListener('load', function () {
+            // Call function to set the active link (assuming it's defined elsewhere)(W3Schools,2024)
+            setActiveLink();
+
+            // Call function to update the footer year(W3Schools,2024)
+            updateFooterYear();
+        });
+
+        // Function to toggle the responsive navigation menu(W3Schools,2024)
+        function myFunction() {
+            // Get the element with id (W3Schools,2024)
+            var x = document.getElementById("myTopnav");
+
+            // Check if the current class name is 'topnav'(W3Schools,2024)
+            if (x.className === "topnav") {
+                // If so, add the 'responsive' class to it(W3Schools,2024)
+                x.className += " responsive";
+            } else {
+                // If not, reset the class name to 'topnav'(W3Schools,2024)
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

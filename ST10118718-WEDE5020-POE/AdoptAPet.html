@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Adopt A Pet</title>
+    <style>
+        /* General content styling (W3Schools,2024) */
+        .content {
+            margin: 25px;
+        }
+
+        /* Heading styling (W3Schools,2024) */
+        h2 {
+            margin: 20px;
+            text-transform: uppercase;
+            color: #41a9c9;
+        }
+
+        /* Margins for various sections (W3Schools,2024) */
+        .adopt-process,
+        .adopt_a_pet_images,
+        .fees-table {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the adopt process steps (W3Schools,2024) */
+        .adopt-process div {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #41a9c9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Icon color and spacing in adopt process (W3Schools,2024) */
+        .adopt-process div i {
+            color: #41a9c9;
+            margin-right: 10px;
+        }
+
+        /* Flexbox styling for adopt a pet images (W3Schools,2024) */
+        .adopt_a_pet_images {
+            display: flex;
+            flex-direction: column;
+            /* Stack the pet groups vertically (W3Schools,2024) */
+            gap: 20px;
+            /* Space between pet groups (W3Schools,2024) */
+        }
+
+        /* Pet group styling to center the images (W3Schools,2024) */
+        .pet-group {
+            display: flex;
+            justify-content: center;
+            /* Center the items (W3Schools,2024) */
+            gap: 20px;
+            /* Space between individual pet images (W3Schools,2024) */
+        }
+
+        /* Individual image container styling (W3Schools,2024) */
+        .adopt_a_pet_images div {
+            flex: 0 1 calc(25% - 20px);
+            background-color: #fff;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image styling within the adopt a pet section (W3Schools,2024) */
+        .adopt_a_pet_images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Table styling for fees (W3Schools,2024) */
+        .fees-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .fees-table th,
+        .fees-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Header styling for the fees table (W3Schools,2024) */
+        .fees-table th {
+            background-color: #41a9c9;
+            color: white;
+        }
+
+        /* Styling for lists (W3Schools,2024) */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        /* List item styling (W3Schools,2024) */
+        ul li {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Font Awesome icon before list items (W3Schools,2024) */
+        ul li::before {
+            content: "\f0da";
+            /* Font Awesome chevron-right icon (W3Schools,2024) */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #41a9c9;
+            margin-right: 10px;
+        }
+
+        /* Responsive styling for medium screens (W3Schools,2024) */
+        @media (max-width: 768px) {
+            .adopt-process {
+                flex-direction: column;
+                /* Stack adopt process steps vertically (W3Schools,2024) */
+            }
+
+            .adopt_a_pet_images div {
+                flex: 1 1 calc(50% - 10px);
+                /* Two items per row on medium screens (W3Schools,2024) */
+            }
+
+            .adopt_a_pet_images img {
+                width: 110%;
+                /* Slightly increase image size */
+            }
+
+            .pet-group {
+                flex-direction: column;
+                /* Stack items vertically in groups on smaller screens (W3Schools,2024) */
+            }
+        }
+
+        /* Responsive styling for small screens (W3Schools,2024) */
+        @media (max-width: 480px) {
+            nav a {
+                padding: 5px 10px;
+                /* Adjust navigation link padding (W3Schools,2024) */
+            }
+
+            .adopt_a_pet_images div {
+                flex: 1 1 100%;
+                /* Make each image container full-width (W3Schools,2024) */
+            }
+
+            .adopt_a_pet_images img {
+                width: 120%;
+                /* Increase image size a bit more (W3Schools,2024) */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logo section(W3Schools,2024) -->
+    <div class="logo">
+        <!-- Logo image with 100% width to fit container(W3Schools,2024) -->
+        <img src="Images/puppy_paradise_logo.png" alt="logo" width="100%">
+    </div>
+
+    <!-- Navigation bar(W3Schools,2024) -->
+    <div class="topnav" id="myTopnav">
+        <!-- Navigation links with icons(W3Schools,2024) -->
+        <a href="Homepage.html" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="AboutUs.html"><i class="fa fa-fw fa-info-circle"></i> About Us</a>
+        <a href="AdoptAPet.html"><i class="fa fa-fw fa-paw"></i> Adopt A Pet</a>
+        <a href="Gallery.html"><i class="fa fa-picture-o"></i> Gallery</a>
+        <a href="ContactUs.html"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+        <!-- Toggle icon for mobile view(W3Schools,2024) -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Main header(W3Schools,2024) -->
+    <h1>Adopt A Pet</h1>
+
+    <div class="content">
+        <!-- Adoption process section(W3Schools,2024) -->
+        <h2>How the Adoption Process Works</h2>
+        <div class="adopt-process">
+            <!-- Steps of the adoption process(W3Schools,2024) -->
+            <div><i class="fa fa-file-text-o"></i> Complete the <strong>Adoption Application Form</strong> available in
+                our
+                store.
+            </div>
+            <div><i class="fa fa-calendar"></i> After assessing your application, we will set up an
+                <strong>appointment</strong> to meet the animals.
+            </div>
+            <div><i class="fa fa-home"></i> Following the meeting, we will arrange a <strong>property
+                    inspection</strong>.
+            </div>
+            <div><i class="fa fa-paw"></i> If needed, we can organize a <strong>meet and greet</strong> with other pets
+                in
+                your home.
+            </div>
+            <div><i class="fa fa-pencil"></i> Once the property inspection is approved, we'll schedule a final
+                appointment
+                to <strong>finalize the adoption</strong>, complete the paperwork, and pay the adoption fee.
+            </div>
+            <div><i class="fa fa-credit-card"></i> A <strong>non-refundable deposit of R100</strong> is required to book
+                the
+                appointment, which will be subtracted from the total adoption fee.
+            </div>
+        </div>
+
+        <!-- Available pets section(W3Schools,2024) -->
+        <div class="adopt_a_pet_images">
+            <div class="pet-group">
+                <div>
+                    <img src="Images/puppies.jpeg" alt="Puppy">
+                    <h3>Puppies</h3>
+                </div>
+                <div>
+                    <img src="Images/adult_dogs.jpeg" alt="Adult Dog">
+                    <h3>Adult Dogs</h3>
+                </div>
+            </div>
+            <div class="pet-group">
+                <div>
+                    <img src="Images/kittens.jpeg" alt="Kitten">
+                    <h3>Kittens</h3>
+                </div>
+                <div>
+                    <img src="Images/adult_cats.jpeg" alt="Adult Cat">
+                    <h3>Adult Cats</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adoption fees section(W3Schools,2024) -->
+        <h2>Adoption Fees</h2>
+        <table class="fees-table">
+            <thead>
+                <tr>
+                    <th>Animal Type</th>
+                    <th>Age Group</th>
+                    <th>Adoption Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fee details for different animals(W3Schools,2024) -->
+                <tr>
+                    <td>Puppies and Dogs</td>
+                    <td>Up to 5 years</td>
+                    <td>R950.00</td>
+                </tr>
+                <tr>
+                    <td>Dogs</td>
+                    <td>6 years and older</td>
+                    <td>R725.00</td>
+                </tr>
+                <tr>
+                    <td>Adult Dogs</td>
+                    <td>10 years and older</td>
+                    <td>R150.00</td>
+                </tr>
+                <tr>
+                    <td>Kittens</td>
+                    <td>Any age</td>
+                    <td>R700.00</td>
+                </tr>
+                <tr>
+                    <td>Adult Cats</td>
+                    <td>Any age</td>
+                    <td>R500.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Guidelines for pet-friendly properties(W3Schools,2024) -->
+        <h2>Guidelines for Pet-Friendly Properties</h2>
+        <ul>
+            <li>The yard should provide plenty of space for play and exercise.</li>
+            <li>Outdoor dogs need access to shaded areas and clean drinking water.</li>
+            <li>Any potential hazards, like exposed wires or harmful chemicals, should be removed.</li>
+            <li>Enclosures for younger pets must be secure and routinely checked.</li>
+            <li>Special requirements might be needed for pets with unique needs.</li>
+        </ul>
+    </div>
+
+    <!-- Footer section(W3Schools, 2024) -->
+    <div class="footer">
+        <!-- Author name(W3Schools, 2024) -->
+        <p>Author: Franklyn Pedro</p>
+        <!-- Placeholder for dynamic year(W3Schools, 2024) -->
+        <p id="footerYear"></p>
+    </div>
+
+    <script>
+        // Function to highlight the active navigation link based on the current page(Coyier, 2012)
+        function setActiveLink() {
+            // Get the current path of the URL(Coyier, 2012)
+            var currentPath = window.location.pathname;
+
+            // Select all anchor tags within elements with the class 'topnav'(Coyier, 2012)
+            var links = document.querySelectorAll('.topnav a');
+
+            // Iterate over each link(Coyier, 2012)
+            links.forEach(function (link) {
+                // Extract the pathname from the href attribute of the link(Coyier, 2012)
+                var linkPath = new URL(link.href).pathname;
+
+                // Check if the current path matches the link's path or if the current path starts with the link's path(Coyier, 2012)
+                // This helps in highlighting links that lead to subpages as well(Coyier, 2012)
+                if (currentPath === linkPath || currentPath.startsWith(linkPath) && linkPath !== '/') {
+                    // Add the 'active' class to the link if it matches the current path(Coyier, 2012)
+                    link.classList.add('active');
+                } else {
+                    // Remove the 'active' class from the link if it does not match the current path(Coyier, 2012)
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Function to update the footer with the current year(W3Schools,2024)
+        function updateFooterYear() {
+            // Get the current year(W3Schools,2024)
+            var year = new Date().getFullYear();
+
+            // Get the footer year element by its ID(W3Schools,2024)
+            var footerYearElement = document.getElementById("footerYear");
+
+            // Update the footer year element's inner HTML to display the current year(W3Schools,2024)
+            footerYearElement.innerHTML = `© ${year} All rights reserved.`;
+        }
+
+        // Add an event listener to the window that executes when the page loads(W3Schools,2024)
+        window.addEventListener('load', function () {
+            // Call function to set the active link (assuming it's defined elsewhere)(W3Schools,2024)
+            setActiveLink();
+
+            // Call function to update the footer year(W3Schools,2024)
+            updateFooterYear();
+        });
+
+        // Function to toggle the responsive navigation menu(W3Schools,2024)
+        function myFunction() {
+            // Get the element with id (W3Schools,2024)
+            var x = document.getElementById("myTopnav");
+
+            // Check if the current class name is 'topnav'(W3Schools,2024)
+            if (x.className === "topnav") {
+                // If so, add the 'responsive' class to it(W3Schools,2024)
+                x.className += " responsive";
+            } else {
+                // If not, reset the class name to 'topnav'(W3Schools,2024)
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

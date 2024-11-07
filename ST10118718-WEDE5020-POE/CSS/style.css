@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f9fa;
+    color: #0d1517;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+.topnav {
+    display: flex;
+    background-color: #41a9c9;
+    justify-content: space-between;
+}
+
+.topnav a {
+    flex-grow: 1;
+    display: block;
+    color: #0d1517;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+.topnav a:hover {
+    background-color: #83d1e9;
+    color: #f4f9fa;
+}
+
+.topnav a.active {
+    background-color: #59cdf1;
+    color: #0d1517;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: #0d1517;
+}
+
+h2 {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #83d1e9;
+    color: #0d1517;
+}
+
+/* Media Query for screens less than 600px(W3Schools,2024) */
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 50%;
+        /* Increase the width for smaller screens(W3Schools,2024) */
+    }
+}
+
+
+/* Media Query for screens less than 600(W3Schools,2024) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        display: block;
+        flex-grow: 0;
+    }
+}
+
+/* Media Query for screens less than 600(W3Schools,2024) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        flex-direction: column;
+    }
+
+    .topnav.responsive a {
+        display: block;
+        text-align: left;
+    }
+}
+
+/* Media Query for screens less than 960(W3Schools,2024) */
+@media screen and (max-width: 960px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        display: block;
+        flex-grow: 0;
+    }
+}
+
+/* Media Query for screens less than 960(W3Schools,2024) */
+@media screen and (max-width: 960px) {
+    .topnav.responsive {
+        flex-direction: column;
+    }
+
+    .topnav.responsive a {
+        display: block;
+        text-align: left;
+    }
+}

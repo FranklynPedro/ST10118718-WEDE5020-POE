@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/lightbox.css" media="screen" />
+    <script src="JavaScript/jquery-1.10.2.min.js"></script>
+    <!-- JavaScript files for the photo gallery(W3School,2024) -->
+    <script src="JavaScript/lightbox-2.6.min.js"></script>
+    <!-- JavaScript files for the photo gallery(W3School,2024) -->
+    <script src="JavaScript/modernizr.custom.js"></script>
+    <!-- JavaScript files for the photo gallery(W3School,2024) -->
+    <title>Gallery</title>
+
+    <style>
+        /* Gallery container styling(W3Schools,2024) */
+        div.gallery {
+            border: 3px solid transparent;
+            /* Same thickness as hover border, but transparent(W3Schools,2024) */
+            width: 100%;
+        }
+
+        div.gallery:hover {
+            border: 3px solid #0282a9;
+            /* Darker border on hover(W3Schools,2024) */
+        }
+
+        /* Image styling within the gallery(W3Schools,2024) */
+        div.gallery img {
+            width: 100%;
+            height: 300px;
+            /* Fixed height for images(W3Schools,2024) */
+            object-fit: cover;
+            /* Ensure images cover the area without distortion(W3Schools,2024) */
+        }
+
+        /* Description container styling(W3Schools,2024) */
+        div.desc {
+            padding: 15px;
+            text-align: center;
+            /* Center the text(W3Schools,2024) */
+        }
+
+        /* Global box-sizing rule(W3Schools,2024) */
+        * {
+            box-sizing: border-box;
+            /* Include padding and border in the element's total width and height(W3Schools,2024) */
+        }
+
+        /* Responsive column styling(W3Schools,2024) */
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 33.33333%;
+            /* Each item takes up one-third of the width(W3Schools,2024) */
+        }
+
+        /*Responsive Iframes(W3Schools,2024)*/
+        .container {
+            position: relative;
+            width: 50%;
+            overflow: hidden;
+            padding-top: 30%;
+            /* 16:9 Aspect Ratio */
+        }
+
+        .responsive-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 20%;
+            height: 20%;
+            border: none;
+        }
+
+        /* Media query for medium screens(W3Schools,2024) */
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                /* Adjust width for medium screens(W3Schools,2024) */
+                margin: 6px 0;
+                /* Add vertical margin(W3Schools,2024) */
+            }
+        }
+
+        /* Media query for small screens(W3Schools,2024) */
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+                /* Full width for small screens(W3Schools,2024) */
+            }
+        }
+
+        /* Clearfix for floated elements(W3Schools,2024) */
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+            /* Clear any floated elements(W3Schools,2024) */
+        }
+
+        /* Adjust youtube video size for smaller screens (W3Schools, 2024) */
+        @media (max-width: 700px) {
+            .container {
+                width: 90%;
+                padding-top: 40%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                width: 100%;
+                padding-top: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Logo section(W3Schools,2024) -->
+    <div class="logo">
+        <!-- Logo image with 100% width to fit container(W3Schools,2024) -->
+        <img src="Images/puppy_paradise_logo.png" alt="logo" width="100%">
+    </div>
+
+    <!-- Navigation bar(W3Schools,2024) -->
+    <div class="topnav" id="myTopnav">
+        <!-- Navigation links with icons(W3Schools,2024) -->
+        <a href="Homepage.html" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="AboutUs.html"><i class="fa fa-fw fa-info-circle"></i> About Us</a>
+        <a href="AdoptAPet.html"><i class="fa fa-fw fa-paw"></i> Adopt A Pet</a>
+        <a href="Gallery.html"><i class="fa fa-picture-o"></i> Gallery</a>
+        <a href="ContactUs.html"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+        <!-- Toggle icon for mobile view(W3Schools,2024) -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Main header(W3Schools,2024) -->
+    <h1>Photo Gallery:</h1>
+
+    <div class="responsive">
+        <!-- Gallery item 1(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/greyCat.jpg" data-lightbox="gallery" target="_blank" title="Grey Cat">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/greyCat.jpg" alt="Image 1">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 2(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/whiteCat.jpg" data-lightbox="gallery" target="_blank" title="White Cat">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/whiteCat.jpg" alt="Image 2">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 3(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/greyCatWithStripes.jpg" data-lightbox="gallery" target="_blank" title="Grey Cat with Stripes">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/greyCatWithStripes.jpg" alt="Image 3">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 4(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/gingerCatWithWhiteFur.jpg" data-lightbox="gallery" target="_blank" title="Ginger Cat with White Fur">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/gingerCatWithWhiteFur.jpg" alt="Image 4">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 5(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/gingerCat.jpg" data-lightbox="gallery" target="_blank" title="Ginger Cat">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/gingerCat.jpg" alt="Image 5">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 6(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/greyAndWhiteCat.jpg" data-lightbox="gallery" target="_blank" title="Grey and White Cat">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/greyAndWhiteCat.jpg" alt="Image 6">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 7 -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/brownAndWhiteDog.jpg" data-lightbox="gallery" target="_blank" title="Brown and White Dog">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/brownAndWhiteDog.jpg" alt="Image 7">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 8(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/blackAndWhiteDog.jpg" data-lightbox="gallery" target="_blank" title="Black and White Dog">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/blackAndWhiteDog.jpg" alt="Image 8">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 9(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/whitePuppyWithBrownEars.jpg" data-lightbox="gallery" target="_blank" title="White Puppy with Brown Ears">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/whitePuppyWithBrownEars.jpg" alt="Image 9">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 10(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/brownPuppy.jpg" data-lightbox="gallery" target="_blank" title="Brown Puppy">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/brownPuppy.jpg" alt="Image 10">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 11(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/blackAndWhitePuppy.jpg" data-lightbox="gallery" target="_blank" title="Black and White Puppy">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/blackAndWhitePuppy.jpg" alt="Image 11">
+            </a>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <!-- Gallery item 12(W3Schools,2024) -->
+        <div class="gallery">
+            <!-- Link to larger image with Lightbox effect(W3Schools,2024) -->
+            <a href="Images/woolyBrownPuppy.jpg" data-lightbox="gallery" target="_blank" title="Wooly Brown Puppy">
+                <!-- Thumbnail image(W3Schools,2024) -->
+                <img src="Images/woolyBrownPuppy.jpg" alt="Image 12">
+            </a>
+        </div>
+    </div>
+
+    <!-- Clearfix to ensure proper alignment of floated elements(W3Schools,2024) -->
+    <div class="clearfix"></div>
+
+    <!-- Responsive Iframe youtube video(W3Schools,2024) -->
+    <h2>How To Adopt An SPCA Dog/ 10 Steps</h2>
+
+    <div class="container" style="margin: 0 auto;">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/IO7EvRwFanU?si=kV3ToJeNxOAynUfH"
+            style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none;"></iframe>
+        <!-- Responsive Iframe youtube video(W3Schools,2024) -->
+    </div>
+
+    <br>
+    <!-- Footer section(W3Schools, 2024) -->
+    <div class="footer">
+        <!-- Author name(W3Schools, 2024) -->
+        <p>Author: Franklyn Pedro</p>
+        <!-- Placeholder for dynamic year(W3Schools, 2024) -->
+        <p id="footerYear"></p>
+    </div>
+
+    <script>
+        // Function to highlight the active navigation link based on the current page(Coyier, 2012)
+        function setActiveLink() {
+            // Get the current path of the URL(Coyier, 2012)
+            var currentPath = window.location.pathname;
+
+            // Select all anchor tags within elements with the class 'topnav'(Coyier, 2012)
+            var links = document.querySelectorAll('.topnav a');
+
+            // Iterate over each link(Coyier, 2012)
+            links.forEach(function (link) {
+                // Extract the pathname from the href attribute of the link(Coyier, 2012)
+                var linkPath = new URL(link.href).pathname;
+
+                // Check if the current path matches the link's path or if the current path starts with the link's path(Coyier, 2012)
+                // This helps in highlighting links that lead to subpages as well(Coyier, 2012)
+                if (currentPath === linkPath || currentPath.startsWith(linkPath) && linkPath !== '/') {
+                    // Add the 'active' class to the link if it matches the current path(Coyier, 2012)
+                    link.classList.add('active');
+                } else {
+                    // Remove the 'active' class from the link if it does not match the current path(Coyier, 2012)
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Function to update the footer with the current year(W3Schools,2024)
+        function updateFooterYear() {
+            // Get the current year(W3Schools,2024)
+            var year = new Date().getFullYear();
+
+            // Get the footer year element by its ID(W3Schools,2024)
+            var footerYearElement = document.getElementById("footerYear");
+
+            // Update the footer year element's inner HTML to display the current year(W3Schools,2024)
+            footerYearElement.innerHTML = `© ${year} All rights reserved.`;
+        }
+
+        // Add an event listener to the window that executes when the page loads(W3Schools,2024)
+        window.addEventListener('load', function () {
+            // Call function to set the active link (assuming it's defined elsewhere)(W3Schools,2024)
+            setActiveLink();
+
+            // Call function to update the footer year(W3Schools,2024)
+            updateFooterYear();
+        });
+
+        // Function to toggle the responsive navigation menu(W3Schools,2024)
+        function myFunction() {
+            // Get the element with id (W3Schools,2024)
+            var x = document.getElementById("myTopnav");
+
+            // Check if the current class name is 'topnav'(W3Schools,2024)
+            if (x.className === "topnav") {
+                // If so, add the 'responsive' class to it(W3Schools,2024)
+                x.className += " responsive";
+            } else {
+                // If not, reset the class name to 'topnav'(W3Schools,2024)
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
